@@ -1,0 +1,76 @@
+/* ===============================
+   WARNA GLOBAL WEBSITE
+   =============================== */
+
+/* Warna background seluruh halaman */
+body {
+    background-color: #f5f7fa;   /* Ubah warna di sini */
+    color: #1f2937;             /* Warna teks */
+    font-family: sans-serif;
+}
+
+/* ===============================
+   WARNA NAVBAR / HEADER
+   =============================== */
+.navbar, header {
+    background-color: #1e40af;  /* Biru tua */
+    color: white;
+}
+
+/* Teks / link di navbar */
+.navbar a, header a {
+    color: #f0f9ff;
+}
+
+/* Hover link navbar */
+.navbar a:hover {
+    color: #dbeafe;
+}
+
+/* ===============================
+   WARNA FOOTER
+   =============================== */
+footer {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+/* ===============================
+   WARNA CARD / BOX
+   =============================== */
+.card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* ===============================
+   WARNA BUTTON UTAMA
+   =============================== */
+.btn-primary {
+    background-color: #2563eb;     /* Warna tombol */
+    border-color: #1d4ed8;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e3a8a;
+    border-color: #1e3a8a;
+}
+
+/* ===============================
+   WARNA TABLE
+   =============================== */
+table th {
+    background-color: #1e40af;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #e2e8f0;
+}
