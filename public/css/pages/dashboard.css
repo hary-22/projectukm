@@ -1,0 +1,140 @@
+/* =========================================================
+   DASHBOARD.CSS - CSS Khusus Halaman Dashboard
+   File: public/css/pages/dashboard.css
+   ========================================================= */
+
+.dashboard-welcome {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-welcome::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.dashboard-welcome h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-welcome p {
+    color: #94a3b8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-card.stat-barang {
+    border-left: 5px solid #3b82f6;
+}
+
+.stat-card.stat-kategori {
+    border-left: 5px solid #10b981;
+}
+
+.stat-card.stat-user {
+    border-left: 5px solid #8b5cf6;
+}
+
+.stat-info .stat-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+}
+
+.stat-info .stat-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1;
+    margin: 0;
+}
+
+.stat-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+.stat-barang .stat-icon {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+
+.stat-kategori .stat-icon {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.stat-user .stat-icon {
+    background: #f5f3ff;
+    color: #8b5cf6;
+}
+
+/* Quick Actions Card */
+.quick-action-card {
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    text-align: center;
+    background: #f8fafc;
+    transition: var(--transition);
+    text-decoration: none;
+    display: block;
+    color: var(--text-main);
+}
+
+.quick-action-card:hover {
+    background: #ffffff;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    color: var(--primary);
+}
+
+.quick-action-card i {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}

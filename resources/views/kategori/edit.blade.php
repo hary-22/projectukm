@@ -1,20 +1,53 @@
 @extends('layouts.app')
+
 @section('title', 'Edit Kategori')
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/pages/kategori.css') }}">
+@endpush
+
 @section('content')
-<h3>Edit Kategori</h3>
-<form method="POST" action="{{ route('kategori.update', $kategori->id) }}">
-    @csrf
-    @method('PUT')
-    <div class="mb-3">
-        <label>Nama Kategori</label>
-        <input type="text" name="nama_kategori" class="form-control" value="{{ $kategori->nama_kategori }}" required>
+<div class="row justify-content-center">
+    <div class="col-lg-7">
+        <div class="page-header mb-3">
+            <div>
+                <h2 class="page-title"><i class="bi bi-pencil-square text-success"></i> Edit Kategori</h2>
+                <p class="page-subtitle">Perbarui data kategori "{{ $kategori->nama_kategori }}"</p>
+            </div>
+            <a href="{{ route('kategori.index') }}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Kembali
+            </a>
+        </div>
+
+        <div class="card-modern">
+            <div class="card-body">
+                <form method="POST" action="{{ route('kategori.update', $kategori->id) }}">
+                    @csrf
+                    @method('PUT')
+
+                    <div class="mb-3">
+                        <label for="nama_kategori" class="form-label">Nama Kategori <span class="text-danger">*</span></label>
+                        <input type="text" id="nama_kategori" name="nama_kategori" class="form-control" value="{{ old('nama_kategori', $kategori->nama_kategori) }}" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="deskripsi" class="form-label">Deskripsi (Opsional)</label>
+                        <textarea id="deskripsi" name="deskripsi" class="form-control" rows="4">{{ old('deskripsi', $kategori->deskripsi) }}</textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 pt-2 border-top">
+                        <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Batal</a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-arrow-repeat"></i> Perbarui Kategori
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-        <label>Deskripsi</label>
-        <textarea name="deskripsi" class="form-control" rows="3">{{ $kategori->deskripsi }}</textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Perbarui</button>
-    <a href="{{ route('kategori.index') }}" class="btn btn-secondary">Kembali</a>
-</form>
+</div>
 @endsection
+
+@push('scripts')
+    <script src="{{ asset('js/pages/kategori.js') }}"></script>
+@endpush

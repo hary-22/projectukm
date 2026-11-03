@@ -1,0 +1,45 @@
+/* =========================================================
+   USER.CSS - CSS Khusus Halaman Manajemen User (Admin)
+   File: public/css/pages/user.css
+   ========================================================= */
+
+.user-avatar-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: var(--primary);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-right: 0.75rem;
+    border: 2px solid #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
+.badge-role-admin {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-full);
+    border: 1px solid #fde68a;
+}
+
+.badge-role-user {
+    background-color: #eff6ff;
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-full);
+    border: 1px solid #bfdbfe;
+}
+
+.form-user-card {
+    max-width: 650px;
+    margin: 0 auto;
+}

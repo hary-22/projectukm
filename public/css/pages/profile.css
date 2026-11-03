@@ -1,0 +1,48 @@
+/* =========================================================
+   PROFILE.CSS - CSS Khusus Halaman Profil
+   File: public/css/pages/profile.css
+   ========================================================= */
+
+.profile-container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.profile-header-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem 1.75rem;
+    position: relative;
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.profile-avatar-large {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+
+.profile-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+}
+
+.profile-email {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 0.75rem;
+}
